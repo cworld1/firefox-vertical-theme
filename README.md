@@ -1,17 +1,27 @@
-# Firefox Paradise Theme
+# Firefox Vertical Theme
 *Last updated August 2024 - Supports Firefox 128+*
 
-![startpage](https://github.com/nathandaven/startpage/blob/master/preview.gif?raw=true)
+This is designed custom fit for me, so don't expect much configurability.
 
+## Enable firefox vertical tabs
 
-My custom Firefox userChrome profile, setup with right handed vertical tabs, compact layout, and MacOS/Paradise colors theming.
+Native vertical tabs are now available in the latest stable version of Firefox.
 
-See [nathandaven/startpage](https://github.com/nathandaven/startpage) for my accompanying start page extension.
+- Enter `about:config` in the search box and OK
+- Search for: `sidebar`
+- Enable `sidebar.verticalTabs` and `sidebar.revamp`
+- Restart Firefox
 
-This is designed custom fit for me, so don't expect much configurability. See [here](https://github.com/ranmaru22/firefox-vertical-tabs) for the more standard theme this is based on.
+If it is not displayed or is collapsed, open the vertical tabs using the sidebar button, then:
 
+- Click the vertical TAB bar Settings
+- Select "Do not Fold"
+- Click the vertical TAB Settings again
+
+With the exception of a slightly misaligned ui, native vertical tabs are available. This project is about yo fix these problem.
 
 ## Installation
+
 0. go to about:config in your URL bar, search for toolkit.legacyUserProfileCustomizations.stylesheets and set it to true
 1. locate the firefox profile folder by going to the *hamburger menu* > *help* > *more torubleshooting information*
 2. click *show in finder* or *open folder* next to profile folder
@@ -22,28 +32,15 @@ This is designed custom fit for me, so don't expect much configurability. See [h
 7. open the extension settings, enable compact mode, and copy the contents of `tab-center-reborn.css` into the stylesheet section
 8. profit
 
-
-## Older Versions
-
-Decided to manage these files in a github repo for better maintainability. See here for the original gists:
-
-- My custom Firefox userChrome.css based on this [project](https://github.com/ranmaru22/firefox-vertical-tabs):  
-https://gist.github.com/nathandaven/67f293758f13971882adf334b66db8ed
-
-- My Tab Centern Reborn custom css config: 
-https://gist.github.com/nathandaven/93f52bdc881a6e7cc621e097404b0d01
-
-
 ## Screenshots
-
-#### MacOS
-
-![startpage](https://github.com/nathandaven/startpage/blob/master/dark-screenshot.png?raw=true)
-
-![startpage](https://github.com/nathandaven/startpage/blob/master/light-screenshot.png?raw=true)
 
 #### Windows
 
 ![dark windows](https://github.com/user-attachments/assets/594da29e-aadf-4c93-a9ba-193ad40a9562)
 
 ![light windows](https://github.com/user-attachments/assets/3fe97cc5-51cd-4cbe-a32f-1d7d55c5f297)
+
+## Thanks
+
+- [CustomCSSforFx](https://github.com/Aris-t2/CustomCSSforFx)
+- [Firefox Paradise Theme](https://github.com/nathandaven/firefox-paradise-theme?tab=readme-ov-file)
