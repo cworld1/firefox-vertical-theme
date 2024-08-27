@@ -1,7 +1,9 @@
 # Firefox Vertical Theme
 *Last updated August 2024 - Supports Firefox 128+*
 
-This is designed custom fit for me, so don't expect much configurability.
+![header image](https://github.com/user-attachments/assets/a66a0076-4270-4f34-9b48-48468a0db305)
+
+This is designed custom fit for me, so don't expect much configurability. macOS users can take a try before I tested its compability.
 
 ## Enable firefox vertical tabs
 
@@ -36,9 +38,11 @@ With the exception of a slightly misaligned ui, native vertical tabs are availab
 
 #### Windows
 
-![dark windows](https://github.com/user-attachments/assets/594da29e-aadf-4c93-a9ba-193ad40a9562)
+![light windows](https://github.com/user-attachments/assets/1a799a30-6fd5-4bd0-aec3-7c97aedcb60b)
 
-![light windows](https://github.com/user-attachments/assets/3fe97cc5-51cd-4cbe-a32f-1d7d55c5f297)
+![light windows collapsed](https://github.com/user-attachments/assets/73c7430b-5081-4c9a-a6f4-624a2453cd61)
+
+![dark windows](https://github.com/user-attachments/assets/11927e41-8eb3-4e44-aa69-82379541bece)
 
 ## Thanks
 
