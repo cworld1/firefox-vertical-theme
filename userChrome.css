@@ -32,7 +32,7 @@
 
   /* sidebar */
   --sidebar-border-color: rgb(176, 176, 176) !important;
-  --sidebar-width: 40px;
+  --sidebar-width: 200px;
 }
 
 /* hotfix for Firefox 107 */
@@ -127,7 +127,7 @@ browser:not(#sidebar) {
   #TabsToolbar .titlebar-buttonbox-container {
     visibility: visible !important;
     position: absolute;
-    top: 12px; /* 12px */
+    top: 0px; /* 12px */
     left: 0px;
   }
 
