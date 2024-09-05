@@ -1,4 +1,5 @@
 # Firefox Vertical Theme
+
 *Last updated August 2024 - Supports Firefox 128+*
 
 ![header image](https://github.com/user-attachments/assets/a66a0076-4270-4f34-9b48-48468a0db305)
@@ -30,6 +31,9 @@ With the exception of a slightly misaligned ui, native vertical tabs are availab
 3. open the highlighted folder (should look something like "13s123f4.default-release")
 4. create a folder named "chrome" if it doesn't exist already
 5. paste files from repo into this folder, or `git clone https://github.com/nathandaven/firefox-paradise-theme.git` and restart firefox (command-q/alt-f4 and reopen)
+  
+   > If you doesn't use the latest version of Firefox, please check the older version in release / tag page.
+
 6. install Tab Center Reborn
 7. open the extension settings, enable compact mode, and copy the contents of `tab-center-reborn.css` into the stylesheet section
 8. profit
