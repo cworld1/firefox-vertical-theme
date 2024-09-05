@@ -71,4 +71,5 @@ sidebar-main:not([expanded]) > #vertical-tabs > #tabbrowser-tabs[orient="vertica
   }
   & .tabbrowser-tab:hover .tab-close-button {
     display: block !important;
-  }}
+  }
+}
