@@ -1,59 +1,74 @@
 #tabbrowser-tabs {
-  --tab-border-radius: 6px;
   --tab-block-margin: 2.5px;
   --tab-selected-outline-color: #d0d0d0;
   --tab-min-height: 31px;
+  --space-medium: calc(1 * var(--space-xsmall));;
 }
 
+sidebar-main[expanded] {
+  width: 200px;
+}
+#tabbrowser-tabs[orient="vertical"], .tools-and-extensions, .bottom-actions {
+  max-width: 196px;
+}
 sidebar-main:not([expanded]) {
   width: 64px;
 }
-
 .wrapper {
   padding-inline-start: 0 !important;
-  padding-inline-end: 0 !important;
 }
 
 /* basic tab style */
-#tabbrowser-tabs .tabbrowser-tab {
-  padding: 0px !important;
-}
-sidebar-main[expanded] #tabbrowser-tabs :is(.tab-stack, #tabbrowser-arrowscrollbox-periphery) {
-  margin: 0 5px;
-}
-sidebar-main:not([expanded]) #tabbrowser-tabs :is(.tab-stack, #tabbrowser-arrowscrollbox-periphery) {
-  margin: 0 3px;
-}
-#tabbrowser-tabs .tab-background:is([selected], [multiselected]) {
-  box-shadow: 0 1px 4px rgba(10,10,10,.25) !important;
-  outline-offset: 0px !important;
+sidebar-main[expanded] #tabbrowser-arrowscrollbox[orient="vertical"] {
+  margin-left: 4px;
 }
 
 /* close button */
-sidebar-main[expanded] > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] .tab-close-button:not([selected]) {
-  display: block !important;
-}
-sidebar-main:not([expanded]) > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab:hover .tab-close-button {
+sidebar-main[expanded] > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] .tab-close-button {
   display: block !important;
 }
 tabs:not([closebuttons="activetab"]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:not([visuallyselected], [labelendaligned]) {
   --tab-label-mask-size: 1em !important;
 }
 
+/* move new tab button to bottom */
+sidebar-main #tabbrowser-tabs[orient="vertical"] {
+  & #newtab-button-container {
+    order: 3;
+  }
+} 
 /* new tab button */
-#tabbrowser-tabs #tabbrowser-arrowscrollbox-periphery {
-  margin-top: calc(var(--tab-block-margin) + 3px) !important;
+#newtab-button-container {
   min-height: var(--tab-min-height);
-}
-#tabbrowser-tabs #tabs-newtab-button {
+  margin-inline-start: 7px !important;
+  padding-top: 0 !important;
+  
+  & #tabbrowser-tabs #vertical-tabs-newtab-button {
   padding: 0 8px !important;
-  flex: 1;
-  border-radius: var(--tab-border-radius)
+  }
 }
-#tabbrowser-tabs #tabs-newtab-button .toolbarbutton-text {
-  text-align: start !important;
+
+/* for pinned tabs */
+sidebar-main[expanded] #tabbrowser-tabs .tab-content {
+  justify-content: space-between;
 }
-sidebar-main[expanded] #tabbrowser-tabs #tabs-newtab-button .toolbarbutton-text::before {
-  content: 'New Tab';
-  margin-left: 4px;
+#tabbrowser-tabs[orient="vertical"] {
+  & #vertical-pinned-tabs-container {
+    padding-inline-end: 0 !important;
+  }
 }
+
+/* when not expanded */
+sidebar-main:not([expanded]) > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] {
+  & .tabbrowser-tab {
+    width: auto !important;
+  }
+  & :is(.tab-stack, #tabbrowser-arrowscrollbox-periphery) {
+    margin: 0 3px;
+  }
+  & .tab-label-container {
+    display: flex !important;
+  }
+  & .tabbrowser-tab:hover .tab-close-button {
+    display: block !important;
+  }}
