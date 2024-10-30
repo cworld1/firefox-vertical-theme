@@ -2,25 +2,36 @@
   --tab-block-margin: 2.5px;
   --tab-selected-outline-color: #d0d0d0;
   --tab-min-height: 31px;
-  --space-medium: calc(1 * var(--space-xsmall));;
+  --space-medium: calc(1 * var(--space-xsmall));
+  --tab-collapsed-background-width: 54px;
+  --tab-inner-inline-margin: 8px;
+  --tab-collapsed-width: 50px;
+}
+
+.actions-list {
+  --button-min-height: calc(var(--button-size-icon) - 6px);
+  
+  & > moz-button {
+    --button-outer-padding-block: 1px !important;
+  }
+  & > moz-button:nth-child(1) {
+    --button-outer-padding-block-start: 5px !important;
+  }
 }
 
 sidebar-main[expanded] {
-  width: 200px;
+  width: 198px;
 }
 #tabbrowser-tabs[orient="vertical"], .tools-and-extensions, .bottom-actions {
-  max-width: 196px;
+  max-width: 198px;
 }
 sidebar-main:not([expanded]) {
-  width: 64px;
-}
-.wrapper {
-  padding-inline-start: 0 !important;
+  width: 70px;
 }
 
 /* basic tab style */
 sidebar-main[expanded] #tabbrowser-arrowscrollbox[orient="vertical"] {
-  margin-left: 4px;
+  margin-left: 0;
 }
 
 /* close button */
@@ -31,40 +42,16 @@ tabs:not([closebuttons="activetab"]) > #tabbrowser-arrowscrollbox > .tabbrowser-
   --tab-label-mask-size: 1em !important;
 }
 
-/* move new tab button to bottom */
-sidebar-main #tabbrowser-tabs[orient="vertical"] {
-  & #newtab-button-container {
-    order: 3;
-  }
-} 
-/* new tab button */
-#newtab-button-container {
-  min-height: var(--tab-min-height);
-  margin-inline-start: 7px !important;
-  padding-top: 0 !important;
-  
-  & #tabbrowser-tabs #vertical-tabs-newtab-button {
-  padding: 0 8px !important;
-  }
-}
-
 /* for pinned tabs */
 sidebar-main[expanded] #tabbrowser-tabs .tab-content {
   justify-content: space-between;
 }
-#tabbrowser-tabs[orient="vertical"] {
-  & #vertical-pinned-tabs-container {
-    padding-inline-end: 0 !important;
-  }
-}
+
 
 /* when not expanded */
 sidebar-main:not([expanded]) > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] {
   & .tabbrowser-tab {
     width: auto !important;
-  }
-  & :is(.tab-stack, #tabbrowser-arrowscrollbox-periphery) {
-    margin: 0 3px;
   }
   & .tab-label-container {
     display: flex !important;
