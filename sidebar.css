@@ -1,58 +1,33 @@
 #tabbrowser-tabs {
-  --tab-block-margin: 2.5px;
-  --tab-selected-outline-color: #d0d0d0;
-  --tab-min-height: 31px;
-  --space-medium: calc(1 * var(--space-xsmall));
+  --tab-min-height: 30px;
   --tab-collapsed-background-width: 54px;
-  --tab-inner-inline-margin: 8px;
   --tab-collapsed-width: 50px;
 }
 
-.actions-list {
-  --button-min-height: calc(var(--button-size-icon) - 6px);
-  
-  & > moz-button {
-    --button-outer-padding-block: 1px !important;
-  }
-  & > moz-button:nth-child(1) {
-    --button-outer-padding-block-start: 5px !important;
-  }
-}
-
 sidebar-main[expanded] {
-  width: 198px;
+  width: 200px;
 }
 #tabbrowser-tabs[orient="vertical"], .tools-and-extensions, .bottom-actions {
-  max-width: 198px;
+  max-width: 200px;
 }
 sidebar-main:not([expanded]) {
   width: 70px;
 }
 
-/* basic tab style */
-sidebar-main[expanded] #tabbrowser-arrowscrollbox[orient="vertical"] {
-  margin-left: 0;
-}
-
 /* close button */
-sidebar-main[expanded] > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] .tab-close-button {
-  display: block !important;
-}
+
 tabs:not([closebuttons="activetab"]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:not([visuallyselected], [labelendaligned]) {
   --tab-label-mask-size: 1em !important;
 }
 
 /* for pinned tabs */
-sidebar-main[expanded] #tabbrowser-tabs .tab-content {
-  justify-content: space-between;
+#tabbrowser-tabs[orient="vertical"] #vertical-pinned-tabs-container .tabbrowser-tab:hover .tab-close-button {
+  display: block !important;
 }
 
 
 /* when not expanded */
 sidebar-main:not([expanded]) > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] {
-  & .tabbrowser-tab {
-    width: auto !important;
-  }
   & .tab-label-container {
     display: flex !important;
   }
