@@ -17,8 +17,14 @@
 }
 @media not ((prefers-contrast) or (-moz-bool-pref: "browser.theme.native-theme")) {
   :root:not([lwtheme]) {
-    --button-background-color-hover: light-dark(rgba(207, 207, 216, .11), rgba(207, 207, 216, .06)) !important;;
-    --button-background-color-active: light-dark(rgb(207, 207, 216, .3), rgba(207, 207, 216, .12)) !important;
+    --button-background-color-hover: light-dark(
+      rgba(207, 207, 216, 0.11),
+      rgba(207, 207, 216, 0.06)
+    ) !important;
+    --button-background-color-active: light-dark(
+      rgb(207, 207, 216, 0.3),
+      rgba(207, 207, 216, 0.12)
+    ) !important;
   }
 }
 
@@ -28,11 +34,14 @@
   list-style-image: url("./icons/TablerReload.svg") !important;
 }
 /* Address bar */
-.urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box {
+.urlbar-input-container[pageproxystate="valid"]
+  > #tracking-protection-icon-container
+  > #tracking-protection-icon-box {
   filter: var(--icons-hack-filter) !important;
   list-style-image: url("./icons/TablerShield.svg") !important;
 }
-#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon, #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
   filter: var(--icons-hack-filter) !important;
   list-style-image: url("./icons/TablerLock.svg") !important;
 }
@@ -40,16 +49,19 @@
   filter: var(--icons-hack-filter) !important;
   list-style-image: url("./icons/TablerTextScan2.svg") !important;
 }
+#pageAction-panel-bookmark,
+#star-button {
+  filter: var(--icons-hack-filter) !important;
+  list-style-image: url("./icons/TablerStar.svg") !important;
+}
+#star-button[starred] {
+  list-style-image: url("./icons/TablerStarFilled.svg") !important;
+}
 
 /* Top Right */
 #downloads-button {
   filter: var(--icons-hack-filter) !important;
   list-style-image: url("./icons/TablerDownload.svg") !important;
-}
-#pageAction-panel-bookmark,
-#star-button {
-  filter: var(--icons-hack-filter) !important;
-  list-style-image: url("./icons/TablerStar.svg") !important;
 }
 #unified-extensions-button {
   filter: var(--icons-hack-filter) !important;
@@ -59,4 +71,3 @@
   filter: var(--icons-hack-filter) !important;
   list-style-image: url("./icons/TablerUserCircle.svg") !important;
 }
-
