@@ -1,0 +1,49 @@
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Icons light/dark fix coloring hack filters */
+:root {
+  --icons-hack-filter: brightness(0) saturate(100%) invert(37%) sepia(8%)
+    saturate(683%) hue-rotate(183deg) brightness(95%) contrast(84%);
+  --window-icons-hack-filter: brightness(0) saturate(100%) invert(37%) sepia(8%)
+    saturate(683%) hue-rotate(183deg) brightness(95%) contrast(84%);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --icons-hack-filter: brightness(0) saturate(100%) invert(94%) sepia(11%)
+      saturate(362%) hue-rotate(184deg) brightness(95%) contrast(87%);
+    --window-icons-hack-filter: brightness(0) saturate(100%) invert(94%)
+      sepia(11%) saturate(362%) hue-rotate(184deg) brightness(95%) contrast(87%);
+  }
+}
+
+/* Top Left */
+#reload-button {
+  filter: var(--icons-hack-filter) !important;
+  list-style-image: url("./icons/TablerReload.svg") !important;
+}
+/* Address bar */
+.urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box {
+  filter: var(--icons-hack-filter) !important;
+  list-style-image: url("./icons/TablerShield.svg") !important;
+}
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon, #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
+  filter: var(--icons-hack-filter) !important;
+  list-style-image: url("./icons/TablerLock.svg") !important;
+}
+#pageAction-urlbar-_036a55b4-5e72-4d05-a06c-cba2dfcc134a_ {
+  filter: var(--icons-hack-filter) !important;
+  list-style-image: url("./icons/TablerTextScan2.svg") !important;
+}
+
+/* Top Right */
+#pageAction-panel-bookmark,
+#star-button {
+  filter: var(--icons-hack-filter) !important;
+  list-style-image: url("./icons/TablerStar.svg") !important;
+}
+#unified-extensions-button {
+  filter: var(--icons-hack-filter) !important;
+  list-style-image: url("./icons/TablerPuzzle.svg") !important;
+}
+
+
