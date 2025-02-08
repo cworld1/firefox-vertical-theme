@@ -1,37 +1,11 @@
 #tabbrowser-tabs {
   --tab-min-height: 30px;
-  --tab-collapsed-background-width: 54px;
-  --tab-collapsed-width: 50px;
-}
-
-sidebar-main[expanded] {
-  width: 200px;
-}
-#tabbrowser-tabs[orient="vertical"], .tools-and-extensions, .bottom-actions {
-  max-width: 200px;
-}
-sidebar-main:not([expanded]) {
-  width: 70px;
-}
-
-/* close button */
-
-tabs:not([closebuttons="activetab"]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:not([visuallyselected], [labelendaligned]) {
-  --tab-label-mask-size: 1em !important;
 }
 
 /* for pinned tabs */
-#tabbrowser-tabs[orient="vertical"] #vertical-pinned-tabs-container .tabbrowser-tab:hover .tab-close-button {
+#tabbrowser-tabs[orient="vertical"]
+  #vertical-pinned-tabs-container
+  .tabbrowser-tab:hover
+  .tab-close-button {
   display: block !important;
-}
-
-
-/* when not expanded */
-sidebar-main:not([expanded]) > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] {
-  & .tab-label-container {
-    display: flex !important;
-  }
-  & .tabbrowser-tab:hover .tab-close-button {
-    display: block !important;
-  }
 }
