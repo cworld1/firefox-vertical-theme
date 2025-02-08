@@ -45,10 +45,6 @@
   filter: var(--icons-hack-filter) !important;
   list-style-image: url("./icons/TablerLock.svg") !important;
 }
-#pageAction-urlbar-_036a55b4-5e72-4d05-a06c-cba2dfcc134a_ {
-  filter: var(--icons-hack-filter) !important;
-  list-style-image: url("./icons/TablerTextScan2.svg") !important;
-}
 #pageAction-panel-bookmark,
 #star-button {
   filter: var(--icons-hack-filter) !important;
