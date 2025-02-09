@@ -1,10 +1,10 @@
 # Firefox Vertical Theme
 
-*Last updated August 2024 - Supports Firefox 128+*
+_Last updated August 2024 - Supports Firefox 128+_
 
 ![header image](https://github.com/user-attachments/assets/a66a0076-4270-4f34-9b48-48468a0db305)
 
-This is designed custom fit for me, so don't expect much configurability. macOS users can take a try before I tested its compability.
+This is designed custom fit for me, so don't expect much configurability. macOS users can take a try before I tested its compatibility.
 
 ## Enable firefox vertical tabs
 
@@ -26,12 +26,12 @@ With the exception of a slightly misaligned ui, native vertical tabs are availab
 ## Installation
 
 0. go to about:config in your URL bar, search for toolkit.legacyUserProfileCustomizations.stylesheets and set it to true
-1. locate the firefox profile folder by going to the *hamburger menu* > *help* > *more torubleshooting information*
-2. click *show in finder* or *open folder* next to profile folder
+1. locate the firefox profile folder by going to the _hamburger menu_ > _help_ > _more troubleshooting information_
+2. click _show in finder_ or _open folder_ next to profile folder
 3. open the highlighted folder (should look something like "13s123f4.default-release")
 4. create a folder named "chrome" if it doesn't exist already
 5. paste files from repo into this folder, or `git clone https://github.com/nathandaven/firefox-paradise-theme.git` and restart firefox (command-q/alt-f4 and reopen)
-  
+
    > If you doesn't use the latest version of Firefox, please check the older version in release / tag page.
 
 6. install Tab Center Reborn
